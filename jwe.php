@@ -1,5 +1,7 @@
 <?php
-
+/*
+ * @author Roman Voloboev <animir@ya.ru>
+ */
 class JWE {
     private $_openssl_path = '/usr/local/bin/';
     private $_temp_dir = '/tmp/';
@@ -18,7 +20,7 @@ class JWE {
         return $this->_openssl_path = $path;
     }    
     /*
-     * Decode JWE token with openssl
+     * Decode JWE token with openssl and alg 'aes-256-gcm'
      * 
      * @param string $jwe JWE token
      * @param string $pemKey Private RSA key in pem format
